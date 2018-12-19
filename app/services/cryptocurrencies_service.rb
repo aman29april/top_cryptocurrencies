@@ -11,6 +11,11 @@ class CryptocurrenciesService
   # returns array of top crypto currencies
   def get_top
     url = base_url + 'cryptocurrency/listings/latest'
+    fetch_data(url)
+  end
+
+  # call api to get data
+  def fetch_data(url)
     response = RestClient.get(url, headers)
     JSON.parse(response)['data']
   end

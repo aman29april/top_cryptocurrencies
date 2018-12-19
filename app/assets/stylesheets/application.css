@@ -15,3 +15,7 @@
  *= require bootstrap_and_overrides
 
  */
+
+.user_name{
+  margin-top: 15px;
+}

@@ -1,3 +1,4 @@
+%h4.text-center Top Cryptocurrencies
 %table.table
   %thead
     %tr
@@ -16,6 +17,6 @@
         %td
           = c['name']
         %td
-          = c['quote']['USD']['price']
+          = number_to_currency c['quote']['USD']['price']
         %td
-          = c['quote']['USD']['market_cap']
+          = number_to_currency c['quote']['USD']['market_cap']
