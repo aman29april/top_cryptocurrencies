@@ -1,0 +1,21 @@
+%table.table
+  %thead
+    %tr
+      %th #
+      %th Currency Code
+      %th Currency Name
+      %th Market Cap (USD)
+      %th Value (USD)
+  %tbody
+    - @currencies.each do |c|
+      %tr
+        %td
+          = c['id']
+        %td
+          = c['symbol']
+        %td
+          = c['name']
+        %td
+          = c['quote']['USD']['price']
+        %td
+          = c['quote']['USD']['market_cap']
